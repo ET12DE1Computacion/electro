@@ -1,0 +1,10 @@
+﻿@model Consumo.Context.Electrodomestico
+
+<h1>Agregar Electrodomestico</h1>
+
+<form asp-controller="Electrodomestico" asp-action="Agregar" method="post">
+    <input asp-for="DniUsuario" placeholder="dniUsuario"/>
+    <input asp-for="Nombre" placeholder="nombre"/>
+    <input asp-for="PotenciaKw" placeholder="potenciaKW"/>
+    <input type="submit" value="Guardar"/>
+</form>

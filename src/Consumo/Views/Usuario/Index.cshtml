@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Consumo.Context.Usuario>
+
+<h1 class="display-4">Usurios</h1>
+
+<p>Cantidad Usuarios: @ViewBag.CantidadUsuarios </p>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Dni</th>
+            <th>Cant. Electrodomesticos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var e in Model)
+        {
+                <tr>
+                    <td>@e.Nombre</td>
+                    <td>@e.Apellido</td>
+                    <td>@e.Dni</td>
+                    <td>@e.Electrodomestico.Count</td>
+                </tr>
+        }
+    </tbody>
+</table>

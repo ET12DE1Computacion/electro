@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Consumo.Context.Electrodomestico>
+
+<h1 class="display-4">Electrodomesticos</h1>
+<br />
+<br />
+<a class="btn btn-primary" role="button" asp-controller="Electrodomestico" asp-action="Agregar">Agregar</a>
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>idElectrodomestico</th>
+            <th>Dni Usuario</th>
+            <th>Nombre</th>
+            <th>Consumo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var e in Model)
+        {
+            <tr>
+                <td>@e.IdElectrodomestico</td>
+                <td>@e.DniUsuario</td>
+                <td>@e.Nombre</td>
+                <td>@e.PotenciaKw</td>
+            </tr>
+        }
+    </tbody>
+</table>
